@@ -8,9 +8,9 @@ int main() {
 
   scanf("%lf", &radius);
 
-  area = 3.14159*raio*raio;
+  area = 3.14159*radius*radius;
 
-  printf("A=.4lf\n", area)
+  printf("A=.4lf\n", area);
 
   return 0;
 
