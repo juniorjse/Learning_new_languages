@@ -1,16 +1,16 @@
 //Junior José da Silva - 19/mar
 
 #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
 
 int main() {
   
-  float radius, area;
+  double radius, area;
 
-  scanf("%f", &radius);
+  scanf("%lf", &radius);
 
-  printf("A=%f", 3.14159 + (pow(radius,2)));
+  area = 3.14159*raio*raio;
+
+  printf("A=.4lf\n", area)
 
   return 0;
 
