@@ -1,3 +1,5 @@
+//Junior José da Silva - 23/mar
+
 #include <stdio.h>
 #include <string.h>
 
