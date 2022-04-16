@@ -69,8 +69,7 @@ for (let i=0;i<=people.length-1;i++){
       console.log("Marks BMI is higher than John's")
     }
   }
-}*/
-
+}
 //conversion
 const inputYear = '1999';
 console.log(Number(inputYear), typeof inputYear);
@@ -85,3 +84,18 @@ let n = '1'+1;
 n --;
 console.log(n);
 console.log('1'+'3'-5+'9');
+
+//
+
+ const scoreDolphins = (96 + 108 + 89) / 3;
+ const scoreKoalas = (88 + 91 + 110) / 3;
+ console.log(scoreDolphins, scoreKoalas);
+
+ if (scoreDolphins > scoreKoalas) {
+   console.log('Dolphins win the trophy 🏆');
+ } else if (scoreKoalas > scoreDolphins) {
+   console.log('Koalas win the trophy 🏆');
+ } else if (scoreDolphins === scoreKoalas) {
+   console.log('Both win the trophy!');
+ }
+*/
