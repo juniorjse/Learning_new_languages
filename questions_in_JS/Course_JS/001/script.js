@@ -157,8 +157,16 @@ switch(day){
 }
 
 age >= 18 ? console.log("I like to drink wine") : console.log("I like to drink water") //se idade for maior ou igual a 18, gosto de vinho, caso contrario, gosto de água
-*/
 const age = 29;
 const drink = age >= 18 ? 'wine' : 'water';
 console.log(`I like to drink ${drink}`)
 console.log(`I like to drink ${age >= 38 ? 'wine' : 'water'}`)
+
+const bill = [275,40,430]
+
+for (let i = 0; i < bill.length; i ++){
+  accountValue = bill[i];
+  const tip = accountValue >= 50 && accountValue <= 300 ? accountValue*0.15 : accountValue*0.2;
+  console.log(`Account Value = ${(accountValue)}; tip = ${(tip)}; total value = ${(accountValue + tip)}`)
+}
+*/
