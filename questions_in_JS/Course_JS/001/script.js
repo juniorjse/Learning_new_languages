@@ -85,17 +85,52 @@ n --;
 console.log(n);
 console.log('1'+'3'-5+'9');
 
-//
 
- const scoreDolphins = (96 + 108 + 89) / 3;
- const scoreKoalas = (88 + 91 + 110) / 3;
- console.log(scoreDolphins, scoreKoalas);
+0, '', null, NaN == false
+se caso definir uma variavel e não atribuir um valor ela será considerada como indefinida e indefino é falso também;
 
- if (scoreDolphins > scoreKoalas) {
-   console.log('Dolphins win the trophy 🏆');
- } else if (scoreKoalas > scoreDolphins) {
-   console.log('Koalas win the trophy 🏆');
- } else if (scoreDolphins === scoreKoalas) {
-   console.log('Both win the trophy!');
- }
+
+diferença entre == e ===
+no === é um operador de igualdade restrito deve ser do mesmo tipo e mesmo valor
+18 === 18:true
+'18' === 18:false
+
+no == é um operador de igualdade que permite diferentes tipos, mas mesmos valores ex: '18' == 18: true
+
+ 
+const favourite = prompt("What's your favourite number?")
+//aqui ele tá reconhecendo o prompt como uma string por isso no if abaixo fica invalido
+
+if (favourite === 23){
+  console.log("ooo")
+}
 */
+
+const dolphins = [(96+108+89),(97+112+101),(97+112+101)];
+const koalas = [(88+91+110),(109+95+123),(109+95+106)];
+ 
+for (let i=0;i<=dolphins.length-1;i++){
+
+  scoreDolphins = dolphins[i]/dolphins.length
+  scoreKoalas = koalas[i]/koalas.length
+
+  console.log("Dolphins: " + scoreDolphins+" Koalas: " + scoreKoalas)
+
+  if(scoreDolphins>=100||scoreKoalas>=100){
+
+    if(scoreDolphins>scoreKoalas){
+      console.log("Dolphins won roud "+(i+1))
+    }
+    else if(scoreDolphins<scoreKoalas){
+      console.log("Koalas won roud "+(i+1))
+    }
+    else if(scoreDolphins==scoreKoalas){
+      console.log("Break even, round "+(i+1))
+    }
+
+  }
+
+  else{
+    console.log("There were no winners in this round as none of the contestants reached 100 points");
+  }
+}
