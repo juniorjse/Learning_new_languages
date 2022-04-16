@@ -54,3 +54,32 @@ function fruitProcessor(fruitA, fruitB){
 
 console.log(fruitProcessor(3,9));
 */
+ 
+//44,23,71,65,54,49
+//85,54,41,23,34,27
+
+const calcAvarage = (a,b,c) => (a+b+c)/3;
+
+const scoreDolphins = calcAvarage(85,54,41);
+const scoreKoalas = calcAvarage(23,34,27);
+
+function checkwinner(avgDolphins, avgKoalas) {
+  let msg;
+  if (avgDolphins > avgKoalas*2 || avgKoalas > avgDolphins*2){
+    if (avgDolphins > avgKoalas){
+      msg = `Dolphins are winner's ${avgDolphins} vs. ${avgKoalas}`;
+    }
+    else{
+      msg = `Koalas are winner's ${avgKoalas} vs. ${avgDolphins}`;
+    }
+  }
+  else{
+    msg = `There are no winners in this match`;
+  }
+  return msg;
+};
+
+//peguei o retorno da função calcAvarage e usei aqui
+console.log(checkwinner(scoreDolphins,scoreKoalas));
+
+
