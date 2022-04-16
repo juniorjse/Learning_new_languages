@@ -104,7 +104,7 @@ const favourite = prompt("What's your favourite number?")
 if (favourite === 23){
   console.log("ooo")
 }
-*/
+
 
 const dolphins = [(96+108+89),(97+112+101),(97+112+101)];
 const koalas = [(88+91+110),(109+95+123),(109+95+106)];
@@ -134,3 +134,31 @@ for (let i=0;i<=dolphins.length-1;i++){
     console.log("There were no winners in this round as none of the contestants reached 100 points");
   }
 }
+
+const day = prompt('Day: ');
+
+switch(day){
+  case 'monday':
+    console.log("Plan course structure");
+  case 'tuesday':
+    console.log("Prepare theory videos");
+  case 'wednesday':
+    console.log("Write code examples");
+    break;
+  case 'friday':
+    console.log("Record videos");
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log("Enjoy the weekend :D")
+    break;
+  default:
+    console.log("Not a valid day!")
+}
+
+age >= 18 ? console.log("I like to drink wine") : console.log("I like to drink water") //se idade for maior ou igual a 18, gosto de vinho, caso contrario, gosto de água
+*/
+const age = 29;
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(`I like to drink ${drink}`)
+console.log(`I like to drink ${age >= 38 ? 'wine' : 'water'}`)
