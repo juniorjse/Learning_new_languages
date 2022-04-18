@@ -114,3 +114,23 @@ if (friends.includes('Steven')) {
   console.log('You have a friend called Steven');
 }
 */
+
+function calcTip(accountValue){
+  return accountValue >= 50 && accountValue <= 300 ? accountValue*0.15 : accountValue*0.2;
+}
+
+function calcAccount(bill){
+  const tips = [];
+  const total = [];
+  for (let i = 0; i < bill.length; i ++){
+    let accountValue = bill[i];
+    tips.push(calcTip(accountValue));
+    let accountTip = tips[i];
+    for (let j = 0; j < bill.length; j ++){
+      total.push(accountValue+accountTip);
+    }
+    console.log(`Account Value = ${(bill[i])}; tip = ${(tips[i])}; total value = ${(total[i])}`)
+  }
+}
+
+console.log(calcAccount([275,40,430,830]));
