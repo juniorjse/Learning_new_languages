@@ -113,10 +113,9 @@ console.log(friends.includes(23));
 if (friends.includes('Steven')) {
   console.log('You have a friend called Steven');
 }
-*/
 
-function calcTip(accountValue){
-  return accountValue >= 50 && accountValue <= 300 ? accountValue*0.15 : accountValue*0.2;
+function calcTip(bill){
+  return bill >= 50 && bill <= 300 ? bill*0.15 : bill*0.2;
 }
 
 function calcAccount(bill){
@@ -133,4 +132,66 @@ function calcAccount(bill){
   }
 }
 
-console.log(calcAccount([275,40,430,830]));
+calcAccount([275,40,430,830]);
+
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven']
+};
+
+
+///////////////////////////////////////
+// Dot vs. Bracket Notation
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven']
+};
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+// console.log(jonas.'last' + nameKey)
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+
+//no prompt vai pedir um objeto, por exemplo, job e se tiver vai retornar aquilo que estiver em job == teacher; caso não, vai retornar o else
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
+}
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+// Challenge
+// "Jonas has 3 friends, and his best friend is called Michael"
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+*/
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} and his best friend is ${jonas.friends[0]}`)
+
+
