@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /*
 let hasDriversLicense = false;
@@ -182,7 +182,6 @@ console.log(jonas);
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 
 
-*/
 
 const jonas = {
   firstName: 'Jonas',
@@ -193,5 +192,61 @@ const jonas = {
 };
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} and his best friend is ${jonas.friends[0]}`)
+// Object Methods
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYeah: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
 
+  calcAge: function () {
+    this.age = 2037 - this.birthYeah;
+    return this.age;
+  },
 
+   getSummary: function (){
+    console.log(`${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`)
+   }
+  // calcAge: function () {
+  //   return 2037 - this.birthYeah;
+}
+
+jonas.getSummary() 
+const john = 
+{
+  fullName: 'John Smith',
+  weight: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
+  }
+}
+const mark = 
+{
+  fullName: 'Mark Miller',
+  weight: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.weight / this.height ** 2;
+    return this.bmi;
+
+  }
+}
+
+console.log(`${john.calcBMI() > mark.calcBMI() ?
+   john.fullName +" BMI ("+ john.bmi + ") is higher than Mark's (" + mark.bmi +")":
+    mark.fullName +" BMI ("+ mark.bmi + ") is higher than John's (" + john.bmi+")"} `)
+
+// While loop
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log('Loop is about to end...');
+}
+*/
