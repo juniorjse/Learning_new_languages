@@ -235,6 +235,7 @@ const mark =
 
   }
 }
+*/
 
 console.log(`${john.calcBMI() > mark.calcBMI() ?
    john.fullName +" BMI ("+ john.bmi + ") is higher than Mark's (" + mark.bmi +")":
@@ -249,4 +250,4 @@ while (dice !== 6) {
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log('Loop is about to end...');
 }
-*/
+
